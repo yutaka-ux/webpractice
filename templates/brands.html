@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ブランド一覧 | 最高峰のジャパンスニーカー</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../static/css/animate.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../static/js/script.js"></script>
+  <script src="../static/js/smooth.js"></script>
+</head>
+
+<body class="sneaker-portfolio brands-page">
+  <header class="header">
+    <div id="wrap">
+      <div class="gnavNext fixed">
+        <div class="gnavinner">
+          <button class="hamburger-menu-button" aria-controls="global-navi-mobile" aria-expanded="false">
+            <span class="hamburger-icon"></span>
+            <span class="visually-hidden"></span>
+          </button>
+
+          <nav class="global-navi">
+            <ul>
+              <li><a href="index.html">ブランド一覧</a></li>
+              <li><a href="categories/index.html">カテゴリ</a></li>
+              <li><a href="new-arrivals/index.html">新着スニーカー</a></li>
+              <li><a href="about/index.html">このサイトについて</a></li>
+              <li><a href="contact/index.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+
+          <nav class="mobile-navi" id="global-navi-mobile" aria-hidden="true">
+            <ul>
+              <li><a href="index.html">ブランド一覧</a></li>
+              <li><a href="categories/index.html">カテゴリ</a></li>
+              <li><a href="new-arrivals/index.html">新着スニーカー</a></li>
+              <li><a href="about/index.html">このサイトについて</a></li>
+              <li><a href="contact/index.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+
+          <div class="search-box">
+            <form id="search-form">
+              <input type="search" id="search-input" placeholder="スニーカーを検索...">
+              <button type="submit">検索</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="maincontents">
+      <section class="page-hero-section">
+        <hgroup>
+          <h1>日本の誇るスニーカーブランド</h1>
+          <p>熟練の技と革新が息づく、<br>各ブランドの哲学と代表作をご紹介します。</p>
+        </hgroup>
+      </section>
+
+      <div class="section-heading">
+        <h2>ブランドを探す</h2>
+      </div>
+
+      <section class="brand-search-filter container">
+        <div class="filter-area">
+          <input type="text" id="brand-name-search" placeholder="ブランド名で検索...">
+          <select id="brand-category-filter">
+            <option value="">全てのカテゴリ</option>
+            <option value="running">ランニング</option>
+            <option value="basketball">バスケットボール</option>
+            <option value="fashion">ファッション</option>
+            <option value="classic">クラシック</option>
+          </select>
+          <button id="apply-filter">フィルターを適用</button>
+        </div>
+      </section>
+
+      <div class="section-heading">
+        <h4>日本のスニーカーブランド一覧</h4>
+      </div>
+
+      <section class="brand-list container">
+        <div class="brand-grid" id="brand-results">
+          <div class="brand-item">
+            <a href="brand-a.html">
+              <div class="brand-logo">
+                <img src="../images/brand-logo-a.png" alt="ブランドA ロゴ">
+              </div>
+              <h3>ブランドA</h3>
+              <p>伝統的な技術とモダンなデザインが融合した、革新的なランニングシューズが特徴です。</p>
+              <div class="brand-thumbnail">
+                <img src="../images/brand-a-sneaker.jpeg" alt="ブランドA 代表スニーカー">
+              </div>
+              <span>詳細を見る</span>
+            </a>
+          </div>
+
+          <div class="brand-item">
+            <a href="brand-b.html">
+              <div class="brand-logo">
+                <img src="../images/brand-logo-b.png" alt="ブランドB ロゴ">
+              </div>
+              <h3>ブランドB</h3>
+              <p>ストリートファッションを牽引する、独自のスタイルと快適性を追求したモデルを展開しています。</p>
+              <div class="brand-thumbnail">
+                <img src="../images/brand-b-sneaker.jpeg" alt="ブランドB 代表スニーカー">
+              </div>
+              <span>詳細を見る</span>
+            </a>
+          </div>
+
+          <div class="brand-item">
+            <a href="brand-c.html">
+              <div class="brand-logo">
+                <img src="../images/brand-logo-c.png" alt="ブランドC ロゴ">
+              </div>
+              <h3>ブランドC</h3>
+              <p>環境に配慮した素材とミニマリスティックなデザインで、サステナブルなスニーカーを提案します。</p>
+              <div class="brand-thumbnail">
+                <img src="../images/brand-c-sneaker.jpeg" alt="ブランドC 代表スニーカー">
+              </div>
+              <span>詳細を見る</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="contact-area">
+        <div class="contact-bg-img">
+          <div class="contact-bg-inner container">
+            <div class="contactboxleft">
+              <h4>お問い合わせ</h4>
+              <div class="contactinleft">
+                <p class="telbig"><span class="telsm">TEL</span><a href="tel:03-4400-4400">03-4400-4400</a></p>
+                <p>平日9：00〜18：00</p>
+              </div>
+              <div class="contactinright">
+                <a href="contact/index.html" class="contact-button">お問い合わせはこちら</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footerinner">
+      <div class="footerlist">
+        <div class="footerlistbox">
+          <h5><a href="index.html">ブランド一覧</a></h5>
+        </div>
+        <div class="footerlistbox">
+          <h5><a href="../categories/index.html">カテゴリ</a></h5>
+        </div>
+        <div class="footerlistbox">
+          <h5><a href="../new-arrivals/index.html">新着スニーカー</a></h5>
+        </div>
+        <div class="footerlistbox">
+          <h5><a href="../about/index.html">このサイトについて</a></h5>
+        </div>
+        <div class="footerlistbox">
+          <h5><a href="../contact/index.html">お問い合わせ</a></h5>
+        </div>
+      </div>
+      <div class="footercomp">
+        <div class="copyright"><br><br>
+          <small>©2025 [あなたのサイト名]. all rights reserved.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="pagetop" href="#">
+    <div class="pagetop__arrow"></div>
+  </a>
+  <script>
+    // WOW.jsなどのアニメーションライブラリは必要に応じて残す
+    // new WOW({mobile: false}).init();
+
+    // ブランド検索・フィルター機能のJavaScript（仮）
+    // 後でPostgreSQLとの連携や、サーバーサイドからのデータ取得を考慮して実装
+    document.addEventListener('DOMContentLoaded', function () {
+      const brandNameSearch = document.getElementById('brand-name-search');
+      const brandCategoryFilter = document.getElementById('brand-category-filter');
+      const applyFilterButton = document.getElementById('apply-filter');
+      const brandResultsContainer = document.getElementById('brand-results');
+
+      function filterBrands() {
+        const searchTerm = brandNameSearch.value.toLowerCase();
+        const selectedCategory = brandCategoryFilter.value;
+        const brandItems = brandResultsContainer.getElementsByClassName('brand-item');
+
+        Array.from(brandItems).forEach(item => {
+          const brandName = item.querySelector('h3').textContent.toLowerCase();
+          // ※カテゴリはダミーのため、実際のブランドデータとカテゴリを紐付ける必要あり
+          // const brandCategory = item.dataset.category; // 例えばdata属性でカテゴリを持つ
+
+          const matchesSearch = brandName.includes(searchTerm);
+          // const matchesCategory = (selectedCategory === "" || brandCategory === selectedCategory);
+
+          // if (matchesSearch && matchesCategory) {
+          if (matchesSearch) { // カテゴリフィルターは後で実装
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+
+      brandNameSearch.addEventListener('keyup', filterBrands);
+      applyFilterButton.addEventListener('click', filterBrands); // フィルターボタンが押された時
+      brandCategoryFilter.addEventListener('change', filterBrands); // セレクトボックスが変更された時
+    });
+  </script>
+</body>
+</html>
