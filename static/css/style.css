@@ -1,6 +1,8 @@
 /* --- 共通スタイル --- */
 /* CSSリセット（例として簡単なもの） */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,7 +13,8 @@ html {
 }
 
 body {
-    font-family: "Noto Sans JP", sans-serif; /* 日本語対応のフォント指定 */
+    font-family: "Noto Sans JP", sans-serif;
+    /* 日本語対応のフォント指定 */
     line-height: 1.6;
     color: #333;
     background-color: #f8f8f8;
@@ -25,11 +28,13 @@ a {
 img {
     max-width: 100%;
     height: auto;
-    vertical-align: bottom; /* 画像の下の余白をなくす */
+    vertical-align: bottom;
+    /* 画像の下の余白をなくす */
 }
 
 .container {
-    max-width: 1000px; /* サイト全体のコンテンツ幅 */
+    max-width: 1000px;
+    /* サイト全体のコンテンツ幅 */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -44,7 +49,8 @@ img {
     color: #222;
     margin-bottom: 20px;
     position: relative;
-    display: inline-block; /* 下線の幅をテキストに合わせる */
+    display: inline-block;
+    /* 下線の幅をテキストに合わせる */
 }
 
 .section-heading h2::after {
@@ -55,7 +61,8 @@ img {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: #007bff; /* メインカラー */
+    background-color: #007bff;
+    /* メインカラー */
 }
 
 .section-heading h4 {
@@ -70,7 +77,7 @@ img {
 .header {
     width: 100%;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
@@ -89,7 +96,8 @@ img {
 .global-navi ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* メニュー間のスペース */
+    gap: 30px;
+    /* メニュー間のスペース */
 }
 
 .global-navi ul li a {
@@ -99,7 +107,8 @@ img {
 }
 
 .global-navi ul li a:hover {
-    color: #007bff; /* ホバー時の色 */
+    color: #007bff;
+    /* ホバー時の色 */
 }
 
 /* 検索ボックス */
@@ -139,29 +148,35 @@ img {
 
 /* --- メインコンテンツ --- */
 .maincontents {
-    padding-top: 90px; /* 固定ヘッダーの高さ分 */
+    padding-top: 90px;
+    /* 固定ヘッダーの高さ分 */
 }
 
 /* ヒーローセクション */
 .hero-section {
-    background-image: url('../images/top-sneaker-hero.jpeg'); /* 適切な画像に置き換える */
+    background-image: url('../images/top-sneaker-hero.jpeg');
+    /* 適切な画像に置き換える */
     background-size: cover;
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 150px 20px; /* 上下のパディングで高さを調整 */
+    padding: 150px 20px;
+    /* 上下のパディングで高さを調整 */
     position: relative;
-    overflow: hidden; /* 画像がはみ出さないように */
+    overflow: hidden;
+    /* 画像がはみ出さないように */
 }
 
-.hero-section::before { /* オーバーレイ */
+.hero-section::before {
+    /* オーバーレイ */
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* 暗めのオーバーレイ */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* 暗めのオーバーレイ */
     z-index: 1;
 }
 
@@ -171,10 +186,9 @@ img {
 }
 
 .hero-section h1 {
-    font-size: 3.5em;
+    font-size: 2.8em;
+    line-height: 1.4;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    line-height: 1.2;
 }
 
 .hero-section h1 span {
@@ -204,15 +218,18 @@ img {
 
 .sneaker-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px以上で自動調整 */
-    gap: 30px; /* アイテム間の隙間 */
-    padding: 0 20px; /* 左右の余白 */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* 280px以上で自動調整 */
+    gap: 30px;
+    /* アイテム間の隙間 */
+    padding: 0 20px;
+    /* 左右の余白 */
 }
 
 .sneaker-item {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
@@ -220,13 +237,15 @@ img {
 
 .sneaker-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .sneaker-item img {
     width: 100%;
-    height: 200px; /* 画像の高さ固定 */
-    object-fit: cover; /* 画像がはみ出さないように調整 */
+    height: 200px;
+    /* 画像の高さ固定 */
+    object-fit: cover;
+    /* 画像がはみ出さないように調整 */
 }
 
 .sneaker-item h3 {
@@ -248,21 +267,24 @@ img {
 
 .why-japanese-sneakers .pointbox {
     display: flex;
-    align-items: flex-start; /* アイコンとテキストの先頭を揃える */
+    align-items: flex-start;
+    /* アイコンとテキストの先頭を揃える */
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
     padding: 25px;
 }
 
 .why-japanese-sneakers .pointleft {
-    flex-shrink: 0; /* アイコンが縮まないように */
+    flex-shrink: 0;
+    /* アイコンが縮まないように */
     margin-right: 20px;
 }
 
 .why-japanese-sneakers .pointleft img {
-    width: 60px; /* アイコンサイズ調整 */
+    width: 60px;
+    /* アイコンサイズ調整 */
     height: 60px;
 }
 
@@ -273,7 +295,8 @@ img {
 }
 
 .why-japanese-sneakers .pointright h4 span {
-    color: #007bff; /* アイコンに合わせた色 */
+    color: #007bff;
+    /* アイコンに合わせた色 */
 }
 
 .why-japanese-sneakers .pointright p {
@@ -316,14 +339,16 @@ img {
     max-width: 800px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* レスポンシブ対応 */
+    flex-wrap: wrap;
+    /* レスポンシブ対応 */
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
 
 .contactboxleft {
-    flex: 1 1 300px; /* 最小幅300pxで伸縮 */
+    flex: 1 1 300px;
+    /* 最小幅300pxで伸縮 */
     text-align: left;
 }
 
@@ -347,12 +372,18 @@ img {
 }
 
 .contactinright {
-    flex: 1 1 200px; /* 最小幅200pxで伸縮 */
+    flex: 1 1 200px;
+    /* 最小幅200pxで伸縮 */
     text-align: center;
+    display: flex;
+    justify-content: center;
+    /* 中央寄せに変更 */
+    align-items: center;
 }
 
 .contactinright a img {
-    max-width: 200px; /* ボタン画像の最大幅 */
+    max-width: 200px;
+    /* ボタン画像の最大幅 */
     height: auto;
 }
 
@@ -423,7 +454,8 @@ footer {
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
     transform: rotate(-45deg) translateY(2px);
-    margin-top: -5px; /* 中央に調整 */
+    margin-top: -5px;
+    /* 中央に調整 */
 }
 
 /* --- レスポンシブデザイン --- */
@@ -452,7 +484,8 @@ footer {
     }
 
     .featured-sneakers .sneaker-grid {
-        grid-template-columns: 1fr; /* 1列表示 */
+        grid-template-columns: 1fr;
+        /* 1列表示 */
     }
 
     .why-japanese-sneakers .pointbox {
@@ -470,7 +503,8 @@ footer {
         flex-direction: column;
     }
 
-    .contactboxleft, .contactinright {
+    .contactboxleft,
+    .contactinright {
         text-align: center;
     }
 
@@ -484,12 +518,15 @@ footer {
     .hero-section h1 {
         font-size: 2em;
     }
+
     .section-heading h2 {
         font-size: 1.8em;
     }
+
     .section-heading h4 {
         font-size: 1.5em;
     }
+
     .telbig {
         font-size: 1.8em;
     }
@@ -498,11 +535,14 @@ footer {
 
 /* --- ブランド一覧ページ専用のヒーローセクション --- */
 .page-hero-section {
-    background-color: #f0f5f9; /* 落ち着いた背景色 */
+    background-color: #f0f5f9;
+    /* 落ち着いた背景色 */
     color: #333;
     text-align: center;
-    padding: 120px 20px 80px; /* 上下のパディング調整 */
-    margin-top: 70px; /* ヘッダーの高さ分 */
+    padding: 120px 20px 80px;
+    /* 上下のパディング調整 */
+    margin-top: 70px;
+    /* ヘッダーの高さ分 */
 }
 
 .page-hero-section h1 {
@@ -527,7 +567,8 @@ footer {
 
 .filter-area {
     display: flex;
-    flex-wrap: wrap; /* 小さい画面で折り返す */
+    flex-wrap: wrap;
+    /* 小さい画面で折り返す */
     justify-content: center;
     gap: 15px;
     max-width: 800px;
@@ -540,8 +581,10 @@ footer {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
-    flex-grow: 1; /* 伸縮可能にする */
-    min-width: 200px; /* 最小幅 */
+    flex-grow: 1;
+    /* 伸縮可能にする */
+    min-width: 200px;
+    /* 最小幅 */
 }
 
 .filter-area button {
@@ -566,15 +609,18 @@ footer {
 
 .brand-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 300px以上で自動調整 */
-    gap: 30px; /* アイテム間の隙間 */
-    padding: 0 20px; /* 左右の余白 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* 300px以上で自動調整 */
+    gap: 30px;
+    /* アイテム間の隙間 */
+    padding: 0 20px;
+    /* 左右の余白 */
 }
 
 .brand-item {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -582,7 +628,7 @@ footer {
 
 .brand-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .brand-item a {
@@ -592,7 +638,8 @@ footer {
 }
 
 .brand-logo img {
-    max-width: 150px; /* ロゴの最大幅 */
+    max-width: 150px;
+    /* ロゴの最大幅 */
     height: auto;
     margin-bottom: 15px;
 }
@@ -612,8 +659,10 @@ footer {
 
 .brand-thumbnail img {
     width: 100%;
-    height: 200px; /* サムネイル画像の高さ固定 */
-    object-fit: cover; /* 画像がはみ出さないように調整 */
+    height: 200px;
+    /* サムネイル画像の高さ固定 */
+    object-fit: cover;
+    /* 画像がはみ出さないように調整 */
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -624,8 +673,8 @@ footer {
     background-color: #007bff;
     color: #fff;
     border-radius: 20px;
-    font-size: 0.9em;
     font-weight: bold;
+    font-size: 0.9em;
     transition: background-color 0.3s ease;
 }
 
@@ -647,12 +696,15 @@ footer {
     .filter-area input[type="text"],
     .filter-area select,
     .filter-area button {
-        min-width: unset; /* 最小幅を解除 */
-        width: 100%; /* 全幅にする */
+        min-width: unset;
+        /* 最小幅を解除 */
+        width: 100%;
+        /* 全幅にする */
     }
 
     .brand-grid {
-        grid-template-columns: 1fr; /* 1列表示 */
+        grid-template-columns: 1fr;
+        /* 1列表示 */
     }
 }
 
@@ -665,14 +717,17 @@ footer {
 
 /* --- ブランド詳細ページ専用ヒーローセクション --- */
 .brand-hero-section {
-    background-color: #e6f0f7; /* ブランドに合わせた背景色 */
+    background-color: #e6f0f7;
+    /* ブランドに合わせた背景色 */
     padding: 80px 20px;
     text-align: center;
-    margin-top: 70px; /* ヘッダーの高さ分 */
+    margin-top: 70px;
+    /* ヘッダーの高さ分 */
 }
 
 .brand-logo-large img {
-    max-width: 250px; /* ブランドロゴのサイズ */
+    max-width: 250px;
+    /* ブランドロゴのサイズ */
     height: auto;
     margin-bottom: 20px;
 }
@@ -695,21 +750,24 @@ footer {
 
 .brand-about .about-content {
     display: flex;
-    flex-wrap: wrap; /* レスポンシブ対応 */
+    flex-wrap: wrap;
+    /* レスポンシブ対応 */
     align-items: center;
     gap: 40px;
 }
 
 .brand-about .about-image {
-    flex: 1 1 45%; /* ある程度の幅を確保しつつ伸縮 */
-    min-width: 300px; /* 最小幅 */
+    flex: 1 1 45%;
+    /* ある程度の幅を確保しつつ伸縮 */
+    min-width: 300px;
+    /* 最小幅 */
 }
 
 .brand-about .about-image img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .brand-about .about-text {
@@ -731,16 +789,18 @@ footer {
 .model-item {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
     display: flex;
-    flex-wrap: wrap; /* レスポンシブ対応 */
+    flex-wrap: wrap;
+    /* レスポンシブ対応 */
     gap: 30px;
     padding: 30px;
     align-items: flex-start;
 }
 
-.model-item:nth-child(even) { /* 偶数番目のモデルで画像の左右を反転 */
+.model-item:nth-child(even) {
+    /* 偶数番目のモデルで画像の左右を反転 */
     flex-direction: row-reverse;
 }
 
@@ -748,13 +808,15 @@ footer {
     flex: 1 1 45%;
     min-width: 300px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2枚の画像を横並び */
+    grid-template-columns: 1fr 1fr;
+    /* 2枚の画像を横並び */
     gap: 15px;
 }
 
 .model-images img {
     width: 100%;
-    height: 200px; /* 画像の高さを固定 */
+    height: 200px;
+    /* 画像の高さを固定 */
     object-fit: cover;
     border-radius: 5px;
 }
@@ -839,12 +901,13 @@ footer {
 .gallery-grid li {
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-grid li img {
     width: 100%;
-    height: 200px; /* 高さを固定 */
+    height: 200px;
+    /* 高さを固定 */
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
@@ -872,7 +935,8 @@ footer {
 .btn-link {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #4CAF50; /* 緑系のボタン */
+    background-color: #4CAF50;
+    /* 緑系のボタン */
     color: #fff;
     border-radius: 30px;
     font-weight: bold;
@@ -889,22 +953,32 @@ footer {
     .brand-hero-section h1 {
         font-size: 2.8em;
     }
+
     .brand-about .about-content,
     .model-item {
-        flex-direction: column; /* 縦並びにする */
+        flex-direction: column;
+        /* 縦並びにする */
         gap: 30px;
     }
-    .model-item:nth-child(even) { /* 偶数番目も縦並び */
+
+    .model-item:nth-child(even) {
+        /* 偶数番目も縦並び */
         flex-direction: column;
     }
+
     .model-images {
-        grid-template-columns: 1fr; /* ギャラリーも1列 */
+        grid-template-columns: 1fr;
+        /* ギャラリーも1列 */
     }
+
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* スマホでは小さめに */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* スマホでは小さめに */
     }
+
     .btn-link {
-        width: 80%; /* ボタン幅を広げる */
+        width: 80%;
+        /* ボタン幅を広げる */
     }
 }
 
@@ -912,506 +986,13 @@ footer {
     .brand-hero-section h1 {
         font-size: 2.2em;
     }
+
     .model-item {
         padding: 20px;
     }
+
     .model-images img {
         height: 150px;
-    }
-}
-
-
-/* ブランドA:詳細を見る */
-/* --- 共通スタイル --- */
-/* CSSリセット（例として簡単なもの） */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: "Noto Sans JP", sans-serif; /* 日本語対応のフォント指定 */
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f8f8;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom; /* 画像の下の余白をなくす */
-}
-
-.container {
-    max-width: 1000px; /* サイト全体のコンテンツ幅 */
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-heading {
-    text-align: center;
-    padding: 60px 20px 30px;
-}
-
-.section-heading h2 {
-    font-size: 2.5em;
-    color: #222;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block; /* 下線の幅をテキストに合わせる */
-}
-
-.section-heading h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #007bff; /* メインカラー */
-}
-
-.section-heading h4 {
-    font-size: 1.8em;
-    color: #444;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-
-/* --- ヘッダー --- */
-.header {
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.gnavinner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-}
-
-.global-navi ul {
-    list-style: none;
-    display: flex;
-    gap: 30px; /* メニュー間のスペース */
-}
-
-.global-navi ul li a {
-    font-weight: bold;
-    color: #555;
-    transition: color 0.3s ease;
-}
-
-.global-navi ul li a:hover {
-    color: #007bff; /* ホバー時の色 */
-}
-
-/* 検索ボックス */
-.search-box {
-    display: flex;
-    align-items: center;
-}
-
-.search-box input[type="search"] {
-    padding: 8px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 0.9em;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.search-box input[type="search"]:focus {
-    border-color: #007bff;
-}
-
-.search-box button {
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-}
-
-.search-box button:hover {
-    background-color: #0056b3;
-}
-
-/* --- メインコンテンツ --- */
-.maincontents {
-    padding-top: 90px; /* 固定ヘッダーの高さ分 */
-}
-
-/* ブランド一覧ページ専用のヒーローセクション */
-.page-hero-section {
-    background-color: #f0f5f9; /* 落ち着いた背景色 */
-    color: #333;
-    text-align: center;
-    padding: 120px 20px 80px; /* 上下のパディング調整 */
-    margin-top: 70px; /* ヘッダーの高さ分 */
-}
-
-.page-hero-section h1 {
-    font-size: 3em;
-    margin-bottom: 15px;
-    color: #222;
-}
-
-.page-hero-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
-}
-
-/* --- 検索・フィルターエリア --- */
-.brand-search-filter {
-    padding: 40px 20px;
-    background-color: #e9eff4;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-}
-
-.filter-area {
-    display: flex;
-    flex-wrap: wrap; /* 小さい画面で折り返す */
-    justify-content: center;
-    gap: 15px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.filter-area input[type="text"],
-.filter-area select {
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    flex-grow: 1; /* 伸縮可能にする */
-    min-width: 200px; /* 最小幅 */
-}
-
-.filter-area button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.filter-area button:hover {
-    background-color: #0056b3;
-}
-
-/* --- ブランドリストのグリッド --- */
-.brand-list {
-    padding: 50px 0;
-}
-
-.brand-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 300px以上で自動調整 */
-    gap: 30px; /* アイテム間の隙間 */
-    padding: 0 20px; /* 左右の余白 */
-}
-
-.brand-item {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.brand-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.brand-item a {
-    display: block;
-    padding: 25px;
-    color: inherit;
-}
-
-.brand-logo img {
-    max-width: 150px; /* ロゴの最大幅 */
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.brand-item h3 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.brand-item p {
-    font-size: 0.95em;
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
-
-.brand-thumbnail img {
-    width: 100%;
-    height: 200px; /* サムネイル画像の高さ固定 */
-    object-fit: cover; /* 画像がはみ出さないように調整 */
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.brand-item span {
-    display: inline-block;
-    padding: 8px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-}
-
-.brand-item a:hover span {
-    background-color: #0056b3;
-}
-
-/* --- お問い合わせ --- */
-.contactArea {
-    background-color: #f2f2f2;
-    padding: 60px 20px;
-    text-align: center;
-    margin-top: 60px;
-}
-
-.contactAreainner {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap; /* レスポンシブ対応 */
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-.contactboxleft {
-    flex: 1 1 300px; /* 最小幅300pxで伸縮 */
-    text-align: left;
-}
-
-.contactboxleft h4 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.telbig {
-    font-size: 2em;
-    font-weight: bold;
-    color: #007bff;
-}
-
-.telsm {
-    font-size: 0.6em;
-    vertical-align: middle;
-    margin-right: 5px;
-    color: #555;
-}
-
-.contactinright {
-    flex: 1 1 200px; /* 最小幅200pxで伸縮 */
-    text-align: center;
-}
-
-.contactinright a img {
-    max-width: 200px; /* ボタン画像の最大幅 */
-    height: auto;
-}
-
-/* --- フッター --- */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.footerinner {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footerlist {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.footerlistbox h5 a {
-    color: #fff;
-    font-weight: normal;
-    transition: color 0.3s ease;
-}
-
-.footerlistbox h5 a:hover {
-    color: #007bff;
-}
-
-.copyright small {
-    font-size: 0.9em;
-    color: #bbb;
-}
-
-/* --- ページトップボタン --- */
-.pagetop {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 0.8em;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    z-index: 999;
-}
-
-.pagetop:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.pagetop__arrow::before {
-    content: '';
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
-    transform: rotate(-45deg) translateY(2px);
-    margin-top: -5px; /* 中央に調整 */
-}
-
-/* --- レスポンシブデザイン --- */
-@media (max-width: 768px) {
-    .gnavinner {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .global-navi ul {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .hero-section {
-        padding: 100px 20px;
-    }
-
-    .hero-section h1 {
-        font-size: 2.5em;
-    }
-
-    .section-heading h2 {
-        font-size: 2em;
-    }
-
-    .featured-sneakers .sneaker-grid {
-        grid-template-columns: 1fr; /* 1列表示 */
-    }
-
-    .why-japanese-sneakers .pointbox {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    .why-japanese-sneakers .pointleft {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-
-    .contactAreainner {
-        flex-direction: column;
-    }
-
-    .contactboxleft, .contactinright {
-        text-align: center;
-    }
-
-    .footerlist {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    /* ブランド一覧ページ専用のレスポンシブ調整 */
-    .page-hero-section h1 {
-        font-size: 2.5em;
-    }
-
-    .page-hero-section p {
-        font-size: 1em;
-    }
-
-    .filter-area input[type="text"],
-    .filter-area select,
-    .filter-area button {
-        min-width: unset; /* 最小幅を解除 */
-        width: 100%; /* 全幅にする */
-    }
-
-    .brand-grid {
-        grid-template-columns: 1fr; /* 1列表示 */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 2em;
-    }
-    .section-heading h2 {
-        font-size: 1.8em;
-    }
-    .section-heading h4 {
-        font-size: 1.5em;
-    }
-    .telbig {
-        font-size: 1.8em;
-    }
-
-    /* ブランド一覧ページ専用のレスポンシブ調整 */
-    .page-hero-section h1 {
-        font-size: 2em;
     }
 }
 
@@ -1421,7 +1002,8 @@ footer {
 /* bodyに brand-detail-page の他に brand-b-page のようなクラスを付けると、より詳細な制御が可能 */
 /* 例: <body class="sneaker-portfolio brand-detail-page brand-b-page"> */
 .brand-b-page .brand-hero-section {
-    background-color: #e0e6ed; /* 少しクールな色合い */
+    background-color: #e0e6ed;
+    /* 少しクールな色合い */
 }
 
 /* 特定のブランドにのみ適用されるスタイル（必要に応じて） */
@@ -1458,13 +1040,15 @@ footer {
 
 /* ハンバーガーボタンはデフォルトで非表示（デスクトップでは不要なため） */
 .hamburger-menu-button {
-    display: none; /* デフォルトでは非表示 */
+    display: none;
+    /* デフォルトでは非表示 */
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
     position: relative;
-    z-index: 1001; /* メニューの上に表示されるように */
+    z-index: 1001;
+    /* メニューの上に表示されるように */
 }
 
 /* ハンバーガーアイコンのスタイル */
@@ -1472,7 +1056,8 @@ footer {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #555; /* アイコンの色 */
+    background-color: #555;
+    /* アイコンの色 */
     position: relative;
     transition: background-color 0.3s ease;
 }
@@ -1483,7 +1068,8 @@ footer {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #555; /* アイコンの色 */
+    background-color: #555;
+    /* アイコンの色 */
     position: absolute;
     transition: transform 0.3s ease;
 }
@@ -1498,7 +1084,8 @@ footer {
 
 /* ハンバーガーメニュー開閉時のアイコンアニメーション */
 .hamburger-menu-button.is-active .hamburger-icon {
-    background-color: transparent; /* 真ん中の線を消す */
+    background-color: transparent;
+    /* 真ん中の線を消す */
 }
 
 .hamburger-menu-button.is-active .hamburger-icon::before {
@@ -1511,22 +1098,29 @@ footer {
 
 /* モバイル用ナビゲーション */
 .mobile-navi {
-    display: none; /* デフォルトでは非表示 */
+    display: none;
+    /* デフォルトでは非表示 */
     position: fixed;
     top: 0;
-    left: 0; /* 画面左端から表示 */
+    left: 0;
+    /* 画面左端から表示 */
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.95); /* 半透明の白背景 */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* 半透明の白背景 */
     z-index: 999;
-    padding-top: 80px; /* ヘッダーの高さ分開ける */
-    overflow-y: auto; /* メニューが多い場合にスクロール可能にする */
+    padding-top: 80px;
+    /* ヘッダーの高さ分開ける */
+    overflow-y: auto;
+    /* メニューが多い場合にスクロール可能にする */
     transition: transform 0.3s ease;
-    transform: translateX(100%); /* 初期状態は画面外に隠す */
+    transform: translateX(100%);
+    /* 初期状態は画面外に隠す */
 }
 
 .mobile-navi.is-active {
-    transform: translateX(0); /* 有効時に画面内に表示 */
+    transform: translateX(0);
+    /* 有効時に画面内に表示 */
 }
 
 .mobile-navi ul {
@@ -1561,23 +1155,29 @@ footer {
 /* デスクトップ版のナビゲーションはモバイル時に非表示にする */
 .global-navi {
     /* デスクトップではflex、モバイルで非表示にするため変更 */
-    display: flex; /* デスクトップのデフォルト */
+    display: flex;
+    /* デスクトップのデフォルト */
 }
 
 /* 検索ボックスもモバイル時に非表示にするか、別途配置を検討 */
 .search-box {
-    display: flex; /* デスクトップのデフォルト */
+    display: flex;
+    /* デスクトップのデフォルト */
 }
 
 
 /* --- レスポンシブデザインのメディアクエリ (768px以下) --- */
 @media (max-width: 768px) {
+
     /* ヘッダーのレイアウト調整 */
     .gnavinner {
-        flex-direction: row; /* 横並びに戻す */
-        justify-content: space-between; /* 均等配置 */
+        flex-direction: row;
+        /* 横並びに戻す */
+        justify-content: space-between;
+        /* 均等配置 */
         align-items: center;
-        padding: 10px 20px; /* パディングを調整 */
+        padding: 10px 20px;
+        /* パディングを調整 */
     }
 
     /* デスクトップ版ナビゲーションを非表示に */
@@ -1598,12 +1198,14 @@ footer {
     /* モバイルナビゲーションをflexに設定することでJavaScriptで表示切り替え */
     .mobile-navi {
         /* デフォルトはtranslateX(100%)で隠し、JSでis-activeを付与してtranslateX(0)で表示 */
-        display: block; /* メディアクエリ内でblockに変更 */
+        display: block;
+        /* メディアクエリ内でblockに変更 */
     }
 
     /* ページのコンテンツが固定ヘッダー・フッターに隠れないように調整 */
     main {
-        padding-top: 70px; /* ヘッダーの高さに合わせて調整 */
+        padding-top: 70px;
+        /* ヘッダーの高さに合わせて調整 */
     }
 }
 
@@ -1617,7 +1219,8 @@ footer {
 
 .contact-form-section {
     max-width: 800px;
-    margin: 40px auto 80px; /* 上40px, 左右auto, 下80px */
+    margin: 40px auto 80px;
+    /* 上40px, 左右auto, 下80px */
     padding: 30px;
     background-color: #fff;
     border-radius: 8px;
@@ -1640,7 +1243,8 @@ footer {
 .contact-info .tel-number {
     font-size: 2.2em;
     font-weight: bold;
-    color: #007bff; /* ブランドカラーに合わせて調整 */
+    color: #007bff;
+    /* ブランドカラーに合わせて調整 */
     margin-bottom: 10px;
 }
 
@@ -1667,7 +1271,8 @@ footer {
 }
 
 .contact-form .required {
-    color: #dc3545; /* 赤色で必須マーク */
+    color: #dc3545;
+    /* 赤色で必須マーク */
     font-size: 0.9em;
     margin-left: 5px;
 }
@@ -1682,8 +1287,10 @@ footer {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
-    font-family: inherit; /* 親要素のフォントを継承 */
-    box-sizing: border-box; /* paddingとborderをwidthに含める */
+    font-family: inherit;
+    /* 親要素のフォントを継承 */
+    box-sizing: border-box;
+    /* paddingとborderをwidthに含める */
     transition: border-color 0.3s ease;
 }
 
@@ -1692,12 +1299,14 @@ footer {
 .contact-form input[type="tel"]:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-    border-color: #007bff; /* フォーカス時に青色 */
+    border-color: #007bff;
+    /* フォーカス時に青色 */
     outline: none;
 }
 
 .contact-form textarea {
-    resize: vertical; /* 縦方向のみリサイズ可能に */
+    resize: vertical;
+    /* 縦方向のみリサイズ可能に */
     min-height: 120px;
 }
 
@@ -1710,15 +1319,18 @@ footer {
 
 .privacy-policy-consent input[type="checkbox"] {
     margin-right: 10px;
-    width: 20px; /* チェックボックスのサイズ調整 */
+    width: 20px;
+    /* チェックボックスのサイズ調整 */
     height: 20px;
     cursor: pointer;
 }
 
 .privacy-policy-consent label {
     font-size: 1em;
-    margin-bottom: 0; /* ラベルのデフォルトマージンをリセット */
-    display: inline-block; /* チェックボックスと並べるため */
+    margin-bottom: 0;
+    /* ラベルのデフォルトマージンをリセット */
+    display: inline-block;
+    /* チェックボックスと並べるため */
     color: #333;
 }
 
@@ -1733,7 +1345,8 @@ footer {
 }
 
 .submit-button {
-    background-color: #007bff; /* プライマリーカラー */
+    background-color: #007bff;
+    /* プライマリーカラー */
     color: #fff;
     border: none;
     padding: 15px 40px;
@@ -1742,17 +1355,20 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    min-width: 200px; /* ボタンの最小幅 */
+    min-width: 200px;
+    /* ボタンの最小幅 */
 }
 
 .submit-button:hover {
-    background-color: #0056b3; /* ホバーで少し暗く */
+    background-color: #0056b3;
+    /* ホバーで少し暗く */
 }
 
 /* --- レスポンシブデザインのメディアクエリ (768px以下) --- */
 @media (max-width: 768px) {
     .contact-form-section {
-        margin: 30px 10px 60px; /* モバイルでの左右マージン */
+        margin: 30px 10px 60px;
+        /* モバイルでの左右マージン */
         padding: 20px;
     }
 
@@ -1775,54 +1391,99 @@ footer {
 
 
 .contact-button {
-    display: inline-block; /* ボタンとして適切な表示形式 */
-    background-color: #007bff; /* 青系のメインカラー */
-    color: #fff; /* 文字色を白に */
-    padding: 15px 30px; /* 内側の余白 */
-    border-radius: 5px; /* 角を丸く */
-    font-size: 1.1em; /* 文字サイズ */
-    font-weight: bold; /* 文字を太く */
-    text-decoration: none; /* 下線を削除 */
-    text-align: center;
-    white-space: nowrap; /* テキストの折り返しを防ぐ */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* ホバーアニメーション */
-    /* 既存のcontactinrightのimg要素のheight/widthに合わせて調整するか、flexboxで中央揃え */
-    height: 50px; /* 既存画像の高さに合わせる */
-    line-height: 50px; /* テキストを垂直中央に */
-    box-sizing: border-box; /* paddingとborderを高さに含める */
+    display: flex;
+    /* flexboxを使用して中央寄せ */
+    align-items: center;
+    /* 垂直方向の中央寄せ */
+    justify-content: center;
+    /* 水平方向の中央寄せ */
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    /* 上下の余白を30pxに設定 */
+    width: 100%;
+    max-width: 300px;
 }
 
 .contact-button:hover {
-    background-color: #0056b3; /* ホバーで少し濃い青に */
-    transform: translateY(-2px); /* 少し上に浮き上がるエフェクト */
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 /* 既存の contactinright スタイルを調整 (画像からボタンへの変更に伴い) */
 .contactinright {
-    display: flex; /* ボタンを中央揃えにするため */
-    align-items: center; /* 垂直方向中央 */
-    justify-content: flex-end; /* 右寄せ */
-    /* 既存の contactinleft との配置に合わせて調整 */
-    width: auto; /* 必要であれば幅を調整 */
+    display: flex;
+    justify-content: center;
+    /* 中央寄せに変更 */
+    align-items: center;
+    width: auto;
+    /* 必要であれば幅を調整 */
 }
 
 /* レスポンシブ対応 (既存のメディアクエリ内に追加または調整) */
 @media (max-width: 768px) {
     .contactinleft {
-        text-align: center; /* モバイルでは電話番号も中央寄せ */
-        width: 100%; /* 全幅に */
-        margin-bottom: 20px; /* 下に余白 */
+        text-align: center;
+        /* モバイルでは電話番号も中央寄せ */
+        width: 100%;
+        /* 全幅に */
+        margin-bottom: 20px;
+        /* 下に余白 */
     }
 
     .contactinright {
-        justify-content: center; /* モバイルではボタンを中央寄せ */
-        width: 100%; /* 全幅に */
+        justify-content: center;
+        /* モバイルではボタンを中央寄せ */
+        width: 100%;
+        /* 全幅に */
     }
 
     .contact-button {
-        padding: 12px 25px; /* モバイルでのパディング調整 */
-        font-size: 1em; /* モバイルでのフォントサイズ調整 */
-        height: auto; /* 高さを自動調整 */
-        line-height: normal; /* 行高さを自動調整 */
+        padding: 12px 25px;
+        /* モバイルでのパディング調整 */
+        font-size: 1em;
+        /* モバイルでのフォントサイズ調整 */
+        height: auto;
+        /* 高さを自動調整 */
+        line-height: normal;
+        /* 行高さを自動調整 */
+    }
+}
+
+/* 540px以下のレスポンシブ対応 */
+@media (max-width: 540px) {
+    .hero-section h1 {
+        font-size: 5.2vw;
+        /* "最高峰のジャパンスニーカー"のサイズ調整 */
+        line-height: 1.3;
+    }
+
+    .hero-section h1 span {
+        font-size: 4.5vw;
+        /* "日本が誇る名品を、あなたの元へ"のサイズ調整 */
+    }
+
+    .section-heading h2 {
+        font-size: 4.8vw;
+        /* "日本が生み出す、珠玉のスニーカーたち"のサイズ調整 */
+        line-height: 1.3;
+    }
+
+    /* 必要に応じて余白も調整 */
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .section-heading {
+        padding: 40px 20px 20px;
     }
 }
