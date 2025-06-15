@@ -27,9 +27,6 @@
 });
 
 
-
-
-
 (function () {
     ('.global-navi li a').each(function () {
         var href = (this).attr('href');
